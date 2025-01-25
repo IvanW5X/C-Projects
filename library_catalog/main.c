@@ -15,11 +15,21 @@
 
 int main(int argc, char** argv) {
 
+    FILE* book_data = fopen("book.csv", "r");
+
+    if (book_data == NULL) {
+        fprintf(stdout, "Error opening book data file, exiting...\n");
+        return EXIT_FAILURE;
+    }
+
+
     HashMap* test;
 
     test = initialize_map();
 
     free_map(test);    
+
+    fclose(book_data);
 
     return EXIT_SUCCESS;
 }
