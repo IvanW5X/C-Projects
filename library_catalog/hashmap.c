@@ -19,6 +19,7 @@
 
 size_t HASH(KEY_TYPE key) {
     // Implement a universal hashing method
+    // Use prime number and select random num method to avoid collisions optimally
 }
 
 
