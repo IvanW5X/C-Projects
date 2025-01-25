@@ -22,12 +22,14 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-
+// TESTING AREA
     HashMap* test;
 
     test = initialize_map();
 
     free_map(test);    
+
+// END TEST AREA
 
     fclose(book_data);
 
