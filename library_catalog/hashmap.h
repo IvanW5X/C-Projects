@@ -36,3 +36,4 @@ typedef struct HashMap HashMap;
 
 size_t HASH(KEY_TYPE key);
 HashMap* initialize_map();
+void free_map(HashMap* map);

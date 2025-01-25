@@ -18,7 +18,7 @@
 
 
 size_t HASH(KEY_TYPE key) {
-
+    // Implement a universal hashing method
 }
 
 
@@ -40,3 +40,26 @@ HashMap* initialize_map() {
 }
 
 
+void free_map(HashMap* map) {
+    if (map == NULL) return;
+
+    HashNode** table = map->table;
+    HashNode* cur = NULL;
+    HashNode* prev = NULL;
+
+    // Iterate table array
+    for (size_t i = 0; i < map->capacity; i++) {
+        cur = table[i];
+
+        // Free each list in table
+        while (cur != NULL) {
+            prev = cur;
+            cur = cur->next;
+            free(prev);
+        }
+    }
+    free(table);
+    free(map);
+
+    return;
+}

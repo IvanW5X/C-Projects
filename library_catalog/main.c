@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 
     test = initialize_map();
 
-    
+    free_map(test);    
 
     return EXIT_SUCCESS;
 }

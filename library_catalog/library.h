@@ -9,10 +9,10 @@
 #pragma once
 
 
-#include "map.h"
+#include "hashmap.h"
 
 
 struct Library {
     int total_books;
-    Map Books;    
+    HashMap Books;    
 };
